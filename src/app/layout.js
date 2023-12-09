@@ -8,12 +8,30 @@ import "./globals.css";
 
 export default function RootLayout({ children }) {
   const path = usePathname();
+
+  let content = null;
+
+  if (path === "/") {
+    content = <div>Content for home page</div>;
+  } else if (path === "/treatments") {
+    content = <div>Content for treatments page</div>;
+  } else if (path === '/ourSpace') {
+    content = <div>Content for ourSpace page</div>;
+  } else if (path === '/testimonials') {
+    content = <div>Content for testimonials page</div>;
+  } else if (path === '/links') {
+    content = <div>Content for links page</div>;
+  } else if (path === '/contact') {
+    content = <div>Content for contact page</div>;
+  } else if (path === '/pics') {
+    content = <div>Content for pics page</div>;
+  }
+
   return (
     <html lang="en">
       <head>
-        
         <title>kinerres</title>
-        </head>
+      </head>
       <body>
         <ThemeProvider
           attribute="class"
@@ -24,10 +42,7 @@ export default function RootLayout({ children }) {
           <NextUIProvider>
             <ReduxProvider>
               <div className="flex flex-row w-full">
-                {path === "/" 
-                ? null : (
-                  <div></div>
-                )}
+                {content}
                 <div className="w-screen">{children}</div>
               </div>
             </ReduxProvider>

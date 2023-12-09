@@ -4,7 +4,6 @@ import { NavigationBar } from "@/components/subcomps/Navbar";
 import Image from "react-bootstrap/Image";
 import React from "react";
 import Slides from "./subcomps/Slides";
-import logoImage from "../../images/logo.jpg"; //rehacer
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 export default function LandingComponent() {
@@ -14,12 +13,13 @@ export default function LandingComponent() {
     return (
         <>
                     <motion.div>
-            <div className="w-full h-18 bg-slate-50 flex flex-row">
+            <div className="w-full h-18 bg-white flex flex-row">
                 <div className="font-medium w-1/2 text-black flex">
                     <Image
-                        className="rounded-xl mt-auto mb-auto pl-4"
-                        src={logoImage}
+                        className="rounded-xl mt-auto mb-auto pl-4 w-[30%]"
+                        src="/images/logo.jpg"
                         alt="logo"
+                        
                     />
                 </div>
                 <div className="flex w-1/2 flex-col text-black text-right pr-4">

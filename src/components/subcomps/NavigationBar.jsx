@@ -16,13 +16,13 @@ const NavigationBar = () => {
             
         />
     </div>
-    <div className="flex w-1/2 flex-col text-black text-right pr-4">
-        <p>Rehabilitación Respiratoria</p>
+    <div className="flex w-1/2 flex-col text-black text-right pr-4 justify-center text-xl">
+{/*         <p>Rehabilitación Respiratoria</p> */}
         <p>Lic. Deborah Gelabert</p>
         <p>Lic. Eugenia Mancini</p>
     </div>
 </div>
-    <Navbar data-bs-theme="dark" className="bg-green-700">
+    <Navbar data-bs-theme="dark" className="bg-Verde">
       <Container>
         <Nav className="me-auto text-xl ">
           <Nav.Link href="/" className="text-white mr-5">

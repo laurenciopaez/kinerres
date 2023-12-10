@@ -1,31 +1,21 @@
-import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from '../../../images/CaroulselImage';
+import Carousel from "react-bootstrap/Carousel";
+import ExampleCarouselImage from "../../../images/CaroulselImage";
+import { Image } from "react-bootstrap";
 
 function Slides() {
   return (
-    <Carousel fade >
-      <Carousel.Item interval={1000}>
-        <ExampleCarouselImage text="health-6" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+    <Carousel fade>
+      <Carousel.Item interval={3000}>
+        <Image src="./images/pic1.jpg" />
+
       </Carousel.Item>
-      <Carousel.Item interval={1000}>
+      <Carousel.Item interval={3000}>
         <ExampleCarouselImage text="web-development" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+
       </Carousel.Item>
-      <Carousel.Item interval={1000}>
+      <Carousel.Item interval={3000}>
         <ExampleCarouselImage text="web-design" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+
       </Carousel.Item>
     </Carousel>
   );

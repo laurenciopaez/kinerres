@@ -46,13 +46,13 @@ const NavigationBar = ({ scrollToSection }) => {
       </div>
 
       {isNavbarScrolled ? (
-        <div className="h-16 bg-white fixed w-full top-0 "></div>
+        <div className="h-16 bg-white fixed w-full top-0 z-10"></div>
       ) : (
         ""
       )}
       <Navbar
         data-bs-theme="dark"
-        className={` fixed w-screen bg-Verde mx-auto ${
+        className={` fixed w-screen z-10 bg-Verde mx-auto ${
           (isNavbarScrolled && !expanded) ? "-translate-y-12 transition duration-500" : ""
         }`}
           variant="dark"
@@ -71,7 +71,7 @@ const NavigationBar = ({ scrollToSection }) => {
               <Nav.Link
                 href="/"
                 onClick={() => scrollToSection("top")}
-                className="text-white mr-5"
+                className="text-white mr-5 ml-5"
               >
                 Inicio
               </Nav.Link>
@@ -90,7 +90,7 @@ const NavigationBar = ({ scrollToSection }) => {
                 Nuestro espacio
               </Nav.Link>
               <Nav.Link
-                href="#testimonios"
+                href="#videos"
                 onClick={() => scrollToSection("testimonios")}
                 className="text-white ml-5 mr-5"
               >

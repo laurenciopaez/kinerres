@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
                 ? null : (
                   <div></div>
                 )}
-                <div className="w-screen">{children}</div>
+                <div className="w-screen overflow-hidden">{children}</div>
               </div>
             </ReduxProvider>
           </NextUIProvider>

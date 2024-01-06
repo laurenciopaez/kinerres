@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,14 +19,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to right, #BEE4E6, #F2EFD0, #A8D1AD);
   scrollbar-width: thin; /* Para Firefox */
   scrollbar-color: #ffffff rgba(240, 240, 240, 0); /* Color del pulgar y la pista de la barra de desplazamiento */
+  font-family: serif;
 }
 body::-webkit-scrollbar {
   width: 12px; /* Ancho de la barra de desplazamiento */

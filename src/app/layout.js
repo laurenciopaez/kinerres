@@ -11,7 +11,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        
         <title>kinerres</title>
         </head>
       <body>
@@ -23,7 +22,7 @@ export default function RootLayout({ children }) {
         >
           <NextUIProvider>
             <ReduxProvider>
-              <div className="flex flex-row w-full">
+              <div className="flex flex-row w-full font-serif">
                 {path === "/" 
                 || path === "/treatments"
                 || path === '/ourSpace'

@@ -4,9 +4,9 @@ import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaGithubSquare, FaDribb
 
 export const Footer = () => {
   return (
-    <footer className="bg-Verde text-white py-12 ">
+    <footer className="  py-12 text-black ">
       <div className="mx-auto flex justify-between">
-        <div className='ml-[10%] w-1/4 border-r-white border-r-2'>
+        <div className='ml-[10%] w-1/4 border-r-black border-r-2'>
           <h2 className="text-4xl font-semibold text-AzulMarino">Kinerres</h2>
           <p className="mt-4 text-sm">
             Rehabilitacion respiratoria. <br/>
@@ -29,7 +29,7 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div className='mr-[10%] w-1/4 text-center border-l-white border-l-2'>
+        <div className='mr-[10%] w-1/4 text-center border-l-black border-l-2'>
           <h3 className="text-2xl font-normal">Contacto</h3>
           <address className="mt-4">
             <p>Dirección: Rawson 1774</p>

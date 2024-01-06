@@ -31,19 +31,13 @@ module.exports = {
         AzulMarino: '#080357',
         Celeste: '#80CED7',
       },
-      fonts: {
-        poppinsLight: {
-          family: "Poppins",
-          weight: "300",
-        },
-        poppinsRegular: {
-          family: "Poppins",
-          weight: "400",
-        },
-        poppinsBold: {
-          family: "Poppins",
-          weight: "700",
-        },
+      backgroundColor: {
+        'serif-mint-light': '#BEE4E6',
+        'seri-mint-breakpoint': '#F2EFD0',
+        'serif-mint-dark': '#A8D1AD',
+      },
+      fontFamily: {
+        serif: ['PT Serif', 'serif'],
       },
     },
   },

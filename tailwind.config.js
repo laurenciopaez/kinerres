@@ -38,6 +38,7 @@ module.exports = {
       },
       fontFamily: {
         serif: ['PT Serif', 'serif'],
+        Mulish: ["Mulish", "sans-serif"],
       },
     },
   },

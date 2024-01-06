@@ -17,18 +17,13 @@ export default function RootLayout({ children }) {
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
-          breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
-          minBreakpoint="xxs"
+          breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs",]}
+          minBreakpoint="xs"
         >
           <NextUIProvider>
             <ReduxProvider>
-              <div className="flex flex-row w-full font-serif">
+              <div className="flex flex-row w-full font-Mulish">
                 {path === "/" 
-                || path === "/treatments"
-                || path === '/ourSpace'
-                || path === '/testimonials'
-                || path === '/links'
-                || path === '/contact'
                 || path === '/pics'
                 ? null : (
                   <div></div>

@@ -4,9 +4,17 @@ import NavigationBar from "@/components/subcomps/NavigationBar";
 import ContactForm from "./subcomps/ContactForm";
 
 const LandingComponent = () => {
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="bg-gradient-to-r from-serif-mint-light via-serif-mint-brakpoint to-serif-mint-dark">
-      <NavigationBar />
+    <div className="bg-gradient-to-r from-serif-mint-light via-serif-mint-brakpoint to-serif-mint-dark" id="top">
+      <NavigationBar scrollToSection={scrollToSection} />
       <div className="text-center flex w-full flex-col h-[65vh]">
         <h1 className="font-semibold text-7xl mb-4 mt-28 text-blue-600 ">
           Programa Kinerres
@@ -47,7 +55,7 @@ const LandingComponent = () => {
         </div>
       </div>
 
-      <div className="mt-20 flex flex-row text-black mb-8 h-[40vh] items-center">
+      <div className="mt-20 flex flex-row text-black mb-8 h-[40vh] items-center" id="tratamientos">
         <h1 className="font-semibold text-5xl w-1/2 content-center justify-center flex">
           Quienes somos?
         </h1>
@@ -60,8 +68,8 @@ const LandingComponent = () => {
         </p>
       </div>
 
-      <div className="flex flex-row text-black p-4 h-[60vh]">
-        <div className="flex flex-col my-auto">
+      <div className="flex flex-row text-black p-4 h-[65vh]">
+        <div className="flex flex-col w-3/12 ml-10">
           <h2 className="font-medium text-2xl">
             ¿Qué es la Rehabilitación Respiratoria?
           </h2>
@@ -75,29 +83,34 @@ const LandingComponent = () => {
             actividad física supervisada.
           </p>
         </div>
-        <div className="flex flex-col my-auto">
+        <div className="flex flex-col w-3/12 ml-10">
+          <h2 className="font-medium text-2xl">¿En que se trabaja?</h2>
+          <p className="font-normal text-lg m-4">
+            {" "}
+            En nuestro centro, fortalecemos tu resistencia y músculos respiratorios, mejoramos coordinación y ofrecemos entrenamiento aeróbico personalizado. Supervisado por nuestro equipo especializado, nuestro enfoque busca reducir exacerbaciones y evitar hospitalizaciones. Únete para respirar más fuerte y vivir plenamente. Tu bienestar es nuestra prioridad. ¡Descubre la libertad de respirar y vive al máximo!
+          </p>
+        </div>
+        <div className="flex flex-col w-5/12 ml-10">
           <h2 className="font-medium text-2xl">¿A quienes está dirigido?</h2>
           <p className="font-normal text-lg m-4">
             {" "}
-            clasLorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Asperiores dolor placeat iure ipsa, provident unde eveniet possimus
-            dolore dolores, quam hic perspiciatis. Ab impedit, suscipit
-            reprehenderit consectetur quia assumenda possimus?
-          </p>
-        </div>
-        <div className="flex flex-col my-auto">
-          <h2 className="font-medium text-2xl">Titulo de que hacen</h2>
-          <p className="font-normal text-lg m-4">
-            {" "}
-            clasLorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Asperiores dolor placeat iure ipsa, provident unde eveniet possimus
-            dolore dolores, quam hic perspiciatis. Ab impedit, suscipit
-            reprehenderit consectetur quia assumenda possimus?
+            Pacientes con EPOC (Enfermedad Pulmonar Obstructiva Crónica) que
+            presentan intolerancia al ejercicio <br />
+            Pacientes con Asma
+            <br />
+            Pacientes Fibroquísticos
+            <br />
+            Pacientes a la espera de trasplante pulmonar
+            <br />
+            Pacientes que han tenido alguna cirugía torácica de reducción de
+            volumen
+            <br />
+            Pacientes con enfermedades Neuromusculares
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col text-black bg-white p-4 h-[60vh] my-auto">
+      <div className="flex flex-col text-black bg-white p-4 h-[60vh] my-auto" id="nuestroEspacio">
         <div className="flex flex-row">
           <div className="w-2/3">
             <img />
@@ -134,9 +147,9 @@ const LandingComponent = () => {
         </div>
       </div>
 
-      <div className="flex flex-col text-black mt-20">
+      <div className="flex flex-col text-black mt-20" id="testimonios">
         <h1 className="w-ful text-center font-semibold text-5xl">
-          Miranos en nuestro youtube
+          Miranos en youtube
         </h1>
         <div className="flex flex-row p-12 h-[50vh]">
           <div className="w-1/2 p-2 content-center flex justify-center">
@@ -162,7 +175,7 @@ const LandingComponent = () => {
         </div>
       </div>
 
-      <div className="bg-cyan-950 mt-20 flex flex-col p-10">
+      <div className="bg-cyan-950 mt-20 flex flex-col p-10" id="contacto">
         <div>
           <h1 className="text-5xl font-semibold text-white">Contactar</h1>
           <h2 className="w-1/2 mt-6 text-lg">
@@ -171,7 +184,7 @@ const LandingComponent = () => {
             mensaje.
           </h2>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row" >
           <div className="flex flex-col w-1/2">
             <ContactForm />
           </div>

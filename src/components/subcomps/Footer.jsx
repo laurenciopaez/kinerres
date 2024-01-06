@@ -4,50 +4,37 @@ import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaGithubSquare, FaDribb
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12 font-mono">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div>
-          <h2 className="text-2xl font-bold text-[skyblue]">EasyTurno</h2>
-          <p className="mt-4 text-sm">
-            Transformando la gestión de turnos y citas para tu negocio. 
-            Simplifica la programación de citas, la gestión de clientes y más.
+    <footer className="  py-12 text-black ">
+      <div className="mx-auto flex justify-between">
+        <div className='ml-[10%] w-1/4 border-r-black border-r-2'>
+          <h2 className="text-4xl font-semibold text-AzulMarino">Kinerres</h2>
+          <p className="mt-4 text-md">
+            Rehabilitacion respiratoria. <br/>
+            Tu puedes lograrlo, respirar bien es moverse bien.
           </p>
           <div className="mt-4 flex space-x-4">
             <FaFacebookSquare />
             <FaInstagram />
-            <FaTwitterSquare />
-            <FaGithubSquare />
-            <FaDribbbleSquare />
           </div>
         </div>
 
-        <div>
-          <h3 className="text-xl font-bold">Enlaces Rápidos</h3>
-          <ul className="mt-4 space-y-2">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="/servicios">Servicios</a></li>
-            <li><a href="/about">Acerca de nosotros</a></li>
-            <li><a href="/precios">Pricing</a></li>
-            <li><a href="/contacto">Contactanos</a></li>
+        <div className='w-1/4 text-center'>
+          <h3 className="text-3xl font-normal">Enlaces Rápidos</h3>
+          <ul className="mt-4 space-y-2 text-lg">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/pics">Fotos</a></li>
+            <li><a href="#tratamientos">Acerca de nosotros</a></li>
+            <li><a href="#nuestroEspacio">Nuestro Espacio</a></li>
+            <li><a href="#contacto">Contactanos</a></li>
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-xl font-bold">Soluciones</h3>
-          <ul className="mt-4 space-y-2">
-            <li><a href="#">Programación de turnos</a></li>
-            <li><a href="#">Gestión de pacientes</a></li>
-            <li><a href="#">Recordatorios de citas</a></li>
-            <li><a href="#">Estadísticas y análisis</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-xl font-bold">Contacto</h3>
-          <address className="mt-4">
-            <p>Dirección: 123 Calle Principal</p>
-            <p>Teléfono: (123) 456-7890</p>
-            <p>Correo Electrónico: info@easyturno.com</p>
+        <div className='mr-[10%] w-1/4 text-center border-l-black border-l-2'>
+          <h3 className="text-3xl font-normal">Contacto</h3>
+          <address className="mt-4 font-normal text-lg text-center justify-center">
+            <p>Dirección: Rawson 1774</p>
+            <p>Mar del Plata, Argentina.</p>
+            <p>Correo Electrónico: kinerres@gmail.com</p>
           </address>
         </div>
       </div>

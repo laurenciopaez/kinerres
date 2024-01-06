@@ -8,7 +8,7 @@ const ContactForm = () => {
 
 
   return (
-      <form onSubmit={handleSubmit} className='w-full flex flex-col h-full pr-8'>
+      <form onSubmit={handleSubmit} className='w-full flex flex-col h-full lg:pr-8 xl:pr-8'>
         <label htmlFor='nombre' className='w-full mt-6 mb-1 font-bold text-lg'>
             Nombre
         </label>

@@ -4,35 +4,34 @@ import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaGithubSquare, FaDribb
 
 export const Footer = () => {
   return (
-    <footer className="  py-12 text-black bg-white bg-opacity-25 ">
-      <div className="mx-auto flex justify-between">
-        <div className='ml-[10%] w-1/4 border-r-black border-r-2'>
+    <footer className=" py-12 text-black bg-white bg-opacity-25 ">
+      <div className="mx-auto flex justify-between flex-col lg:flex-row xl:flex-row">
+        <div className='ml-[10%] lg:w-1/4 xl:w-1/4 mb-4 border-r-black lg:border-r-2 xl:border-r-2'>
           <h2 className="text-5xl font-bold text-Verde">Kinerres</h2>
           <p className="mt-4 text-lg">
             Rehabilitacion respiratoria. <br/>
             Tu puedes lograrlo, respirar bien es moverse bien.
           </p>
           <div className="mt-4 flex space-x-4">
-            <FaFacebookSquare />
-            <FaInstagram />
+            <FaFacebookSquare  className='text-xl'/>
+            <FaInstagram  className='text-xl' />
           </div>
         </div>
 
-        <div className='w-1/4 text-center'>
+        <div className='lg:w-1/4 xl:w-1/4 w-full text-center'>
           <h3 className="text-3xl font-normal">Enlaces Rápidos</h3>
-          <ul className="mt-4 space-y-2 text-lg">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/pics">Fotos</a></li>
-            <li><a href="#tratamientos">Acerca de nosotros</a></li>
-            <li><a href="#nuestroEspacio">Nuestro Espacio</a></li>
-            <li><a href="#contacto">Contactanos</a></li>
+          <ul className="lg:mt-4 xl:mt-4 mt-1 space-y-2 text-lg">
+            <li><a href="/" className='hover:underline transition duration-100 hover:cursor-pointer'>Inicio</a></li>
+            <li><a href="#tratamientos" className='hover:underline transition duration-100 hover:cursor-pointer'>Acerca de nosotros</a></li>
+            <li><a href="#nuestroEspacio" className='hover:underline transition duration-100 hover:cursor-pointer'>Nuestro Espacio</a></li>
+            <li><a href="#contacto" className='hover:underline transition duration-100 hover:cursor-pointer'>Contactanos</a></li>
           </ul>
         </div>
 
-        <div className='mr-[10%] w-1/4 text-center border-l-black border-l-2'>
-          <h3 className="text-3xl font-normal text-right">Contacto</h3>
-          <address className="mt-4 font-normal text-lg text-right justify-center">
-            <p>Dirección: Rawson 1774</p>
+        <div className='mr-[10%] lg:w-1/4 xl:w-1/4 w-full border-l-black lg:border-l-2 xl:border-l-2'>
+          <h3 className="text-3xl font-normal xl:text-right lg:text-right text-center">Contacto</h3>
+          <address className="lg:mt-4 xl:mt-4 mt-1 font-normal text-lg lg:text-right xl:text-right text-center justify-center">
+            <p >Dirección: Rawson 1774</p>
             <p>Mar del Plata, Argentina.</p>
             <p>Correo Electrónico: kinerres@gmail.com</p>
           </address>

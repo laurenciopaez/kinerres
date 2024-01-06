@@ -45,7 +45,7 @@ const NavigationBar = ({ scrollToSection }) => {
         className={` fixed w-full  mx-auto ${
           isNavbarScrolled ? "-translate-y-12 transition duration-500" : ""}`}
       >
-        <Container className="mx-auto bg-Verde rounded-sm shadow-md">
+        <Container className="mx-auto bg-Verde rounded-sm shadow-md ">
           <Nav className="mx-auto text-xl ">
             <Nav.Link href="/" onClick={() => scrollToSection("top")} className="text-white mr-5">
               Inicio

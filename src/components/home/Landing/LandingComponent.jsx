@@ -15,18 +15,18 @@ const LandingComponent = () => {
   const [ref, inView] = useInView();
   const [ref2, inView2] = useInView();
 
-  useEffect( () => {
-    if(inView) {
-      setAnimation1(true)
+  useEffect(() => {
+    if (inView) {
+      setAnimation1(true);
     } else if (animation1 && !inView) {
-      setAnimation1(false)
+      setAnimation1(false);
     }
-    if(inView2) {
-      setAnimation2(true)
+    if (inView2) {
+      setAnimation2(true);
     } else if (animation2 && !inView2) {
-      setAnimation2(false)
+      setAnimation2(false);
     }
-  } , [inView, inView2])
+  }, [inView, inView2]);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -37,9 +37,22 @@ const LandingComponent = () => {
 
   return (
     <div
-      className="bg-gradient-to-r from-serif-mint-light via-serif-mint-brakpoint to-serif-mint-dark w-screen"
+      className="bg-gradient-to-r from-serif-mint-light via-serif-mint-brakpoint to-serif-mint-dark w-full"
       id="top"
     >
+      <a
+        href="https://wa.me/+5492236157119"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/images/wp.png"
+          alt="WhatsApp"
+          width='100px'
+          className="fixed bottom-10 right-10 z-50 hover:scale-105 duration-75 transition"
+          
+        />
+      </a>
       <NavigationBar scrollToSection={scrollToSection} />
       <div className="text-center flex w-full flex-row h-auto">
         <div className="flex flex-col mx-auto w-2/3 items-center ">
@@ -87,7 +100,7 @@ const LandingComponent = () => {
           </div>
           <img
             src="/images/lic2.jpg"
-            className="w-[45%] h-fit max-h-[45vh] mx-auto mt-6 border-2 border-white rounded-full mb-10"
+            className="lg:w-[45%] xl:w-[45%] h-fit max-h-[45vh] mx-auto mt-6 border-2 border-white rounded-full mb-10"
           />
         </div>
         <div className="flex flex-col w-1/2">
@@ -99,7 +112,7 @@ const LandingComponent = () => {
           </div>
           <img
             src="/images/lic1.jpg"
-            className="w-[45%] h-fit max-h-[45vh] mx-auto mt-6 border-2 border-white rounded-full"
+            className="lg:w-[45%] xl:w-[45%] h-fit max-h-[45vh] mx-auto mt-6 border-2 border-white rounded-full"
           />
         </div>
       </div>
@@ -108,7 +121,7 @@ const LandingComponent = () => {
         className="flex lg:flex-row xl:flex-row flex-col items-center text-center text-black p-4  mt-52 border-t-2 border-b-2 border-Verde"
         id="tratamientos"
       >
-        <div className="flex flex-col lg:w-1/2 xl:w-1/2 ml-10 p-2 h-auto ">
+        <div className="flex flex-col lg:w-1/2 xl:w-1/2 ml-10 p-2 h-auto " >
           <div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -214,37 +227,35 @@ const LandingComponent = () => {
         </div>
       </div>
 
-      <div className="flex flex-col text-black mt-20" id="testimonios">
-        <h1 className="w-ful text-center font-semibold lg:text-5xl xl:text-5xl text-2xl mb-10">
-          Miranos en{" "}
+      <div className="flex flex-col text-black mt-20" id="testimonios" >
+        <h1 className="w-ful text-center font-semibold lg:text-5xl xl:text-5xl text-3xl mb-10">
+          Encontranos en{" "}
           <span className="hover:text-red-500 transition duration-150">
             Youtube
           </span>
         </h1>
         <div className="flex flex-col lg:flex-row xl:flex-row p-12 min-h-[50vh]">
-    
-            <div className="w-1/2 p-2 content-center flex justify-center mx-auto">
-              <iframe
-                src="https://www.youtube.com/embed/BLvn52j75tk"
-                title='PROGRAMA DE REHABILITACIÓN PULMONAR "KINERRES" DE LA UNIDAD DE CARDIOLOGÍA CLÍNICA'
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className="w-4/5 h-full "
-                allowfullscreen
-              ></iframe>
-            </div>
-      
-            <div className="w-1/2 p-2 content-center flex justify-center mx-auto">
-              <iframe
-                src="https://www.youtube.com/embed/4rr4OiIOYGU"
-                title="PRIMERA JORNADA DE CAPACITACIÓN SOBRE ENFERMEDAD PULMONAR INTERSTICIAL"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className="w-4/5 h-full "
-                allowfullscreen
-              ></iframe>
-            </div>
-   
+          <div className="w-1/2 p-2 content-center flex justify-center mx-auto">
+            <iframe
+              src="https://www.youtube.com/embed/BLvn52j75tk"
+              title='PROGRAMA DE REHABILITACIÓN PULMONAR "KINERRES" DE LA UNIDAD DE CARDIOLOGÍA CLÍNICA'
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              className="w-4/5 h-full "
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div className="w-1/2 p-2 content-center flex justify-center mx-auto">
+            <iframe
+              src="https://www.youtube.com/embed/4rr4OiIOYGU"
+              title="PRIMERA JORNADA DE CAPACITACIÓN SOBRE ENFERMEDAD PULMONAR INTERSTICIAL"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              className="w-4/5 h-full "
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
 
@@ -252,11 +263,12 @@ const LandingComponent = () => {
         className="bg-cyan-950 mt-20 flex flex-col p-10 border-t-2 border-Verde border-b-2"
         id="contacto"
       >
-
-        <motion.div  ref={ref2}
-              initial={{ x: "-20%", opacity: 0 }}
-              animate={animation2 ? { x: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.6, type: "easeIn" }}>
+        <motion.div
+          ref={ref2}
+          initial={{ x: "-20%", opacity: 0 }}
+          animate={animation2 ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.6, type: "easeIn" }}
+        >
           <h1 className="lg:text-5xl xl:text-5l text-3xl font-semibold text-white  text-start">
             Contactar
           </h1>
@@ -266,10 +278,13 @@ const LandingComponent = () => {
             mensaje.
           </h2>
         </motion.div>
-        <motion.div ref={ref2}
-              initial={{ x: "20%", opacity: 0 }}
-              animate={animation2 ? { x: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.6, type: "easeIn" }} className="flex xl:flex-row lg:flex-row flex-col">
+        <motion.div
+          ref={ref2}
+          initial={{ x: "20%", opacity: 0 }}
+          animate={animation2 ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.6, type: "easeIn" }}
+          className="flex xl:flex-row lg:flex-row flex-col"
+        >
           <div className="flex flex-col lg:w-1/2 xl:w-1/2 mx-auto w-full">
             <ContactForm />
           </div>

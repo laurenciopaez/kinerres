@@ -71,7 +71,7 @@ const NavigationBar = ({ scrollToSection }) => {
               <Nav.Link
                 href="/"
                 onClick={() => scrollToSection("top")}
-                className="text-white mr-5"
+                className="text-white mr-5 ml-5"
               >
                 Inicio
               </Nav.Link>
@@ -90,7 +90,7 @@ const NavigationBar = ({ scrollToSection }) => {
                 Nuestro espacio
               </Nav.Link>
               <Nav.Link
-                href="#testimonios"
+                href="#videos"
                 onClick={() => scrollToSection("testimonios")}
                 className="text-white ml-5 mr-5"
               >

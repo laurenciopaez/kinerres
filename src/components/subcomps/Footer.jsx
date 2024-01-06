@@ -4,11 +4,11 @@ import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaGithubSquare, FaDribb
 
 export const Footer = () => {
   return (
-    <footer className="  py-12 text-black ">
+    <footer className="  py-12 text-black bg-white bg-opacity-25 ">
       <div className="mx-auto flex justify-between">
         <div className='ml-[10%] w-1/4 border-r-black border-r-2'>
-          <h2 className="text-4xl font-semibold text-AzulMarino">Kinerres</h2>
-          <p className="mt-4 text-md">
+          <h2 className="text-5xl font-bold text-Verde">Kinerres</h2>
+          <p className="mt-4 text-lg">
             Rehabilitacion respiratoria. <br/>
             Tu puedes lograrlo, respirar bien es moverse bien.
           </p>
@@ -30,8 +30,8 @@ export const Footer = () => {
         </div>
 
         <div className='mr-[10%] w-1/4 text-center border-l-black border-l-2'>
-          <h3 className="text-3xl font-normal">Contacto</h3>
-          <address className="mt-4 font-normal text-lg text-center justify-center">
+          <h3 className="text-3xl font-normal text-right">Contacto</h3>
+          <address className="mt-4 font-normal text-lg text-right justify-center">
             <p>Dirección: Rawson 1774</p>
             <p>Mar del Plata, Argentina.</p>
             <p>Correo Electrónico: kinerres@gmail.com</p>

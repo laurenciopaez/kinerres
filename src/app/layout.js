@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         >
           <NextUIProvider>
             <ReduxProvider>
-              <div className="flex flex-row w-full font-serif">
+              <div className="flex flex-row w-full font-Mulish">
                 {path === "/" 
                 || path === "/treatments"
                 || path === '/ourSpace'

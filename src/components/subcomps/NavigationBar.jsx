@@ -24,10 +24,11 @@ const NavigationBar = ({ scrollToSection }) => {
 
   return (
     <>
-      <div className="w-full h-18 bg-white flex flex-row">
-        <div className="font-medium w-1/2 text-black flex">
-        <a href="/"><Image
-            className="rounded-xl mt-auto mb-auto pl-4 w-[30%]"
+      <div className="w-full h-24 bg-white flex flex-row ">
+        <div className="font-medium w-1/2 text-black flex h-full">
+        <a href="/" className="h-full">
+          <img
+            className="mt-auto mb-auto pl-4 overflow-auto h-24"
             src="/images/logo.jpg"
             alt="logo"/>
             
@@ -40,12 +41,14 @@ const NavigationBar = ({ scrollToSection }) => {
           <p>Lic. Eugenia Mancini</p>
         </div>
       </div>
+    
+       {isNavbarScrolled ?  <div className="h-16 bg-white fixed w-full top-0 "></div> : ""} 
       <Navbar
         data-bs-theme="dark"
-        className={` fixed w-full  mx-auto ${
+        className={` fixed w-full bg-Verde mx-auto ${
           isNavbarScrolled ? "-translate-y-12 transition duration-500" : ""}`}
       >
-        <Container className="mx-auto bg-Verde rounded-sm shadow-md ">
+        <Container className="  rounded-sm shadow-md w-full ">
           <Nav className="mx-auto text-xl ">
             <Nav.Link href="/" onClick={() => scrollToSection("top")} className="text-white mr-5">
               Inicio
@@ -69,7 +72,7 @@ const NavigationBar = ({ scrollToSection }) => {
               onClick={() => scrollToSection("testimonios")}
               className="text-white ml-5 mr-5"
             >
-              Testimonios
+              Videos
             </Nav.Link>
             <Nav.Link
               href="#contacto"
@@ -77,9 +80,6 @@ const NavigationBar = ({ scrollToSection }) => {
               className="text-white ml-5 mr-5"
             >
               Contacto
-            </Nav.Link>
-            <Nav.Link href="/pics" className="text-white ml-5">
-              Fotos y videos
             </Nav.Link>
           </Nav>
         </Container>

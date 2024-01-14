@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Image} from 'canvas'
 
 const PicturesSpace = () => {
   const picsArray = [
@@ -10,6 +9,7 @@ const PicturesSpace = () => {
   ];
 
   const [importartPic, setImportartPic] = useState(picsArray[0]);
+
   return (
     <div className="flex flex-col lg:flex-row xl:flex-row text-black  bg-opacity-25 bg-white pt-10 pb-10 border-b-2 border-Verde mx-auto">
       {/* aca va la imagen principal */}

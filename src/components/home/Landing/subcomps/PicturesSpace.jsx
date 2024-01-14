@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const PicturesSpace = () => {
@@ -23,7 +24,7 @@ const PicturesSpace = () => {
       {/* aca van las imagenes que se podes clickear */}
       <div className="lg:w-1/3 xl:w-1/3 flex-col flex lg:pr-20 xl:pr-20 w-full lg:pl-0 xl:pl-0 my-auto mx-auto">
         {picsArray.map((el, index) => {
-          const tempImage = new Image;
+          const tempImage = new Image();
           tempImage.src = el;
           if (tempImage.height > tempImage.width) {
             if (el !== importartPic) {

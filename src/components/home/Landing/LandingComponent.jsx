@@ -123,6 +123,7 @@ const LandingComponent = () => {
         </div>
       </div>
 
+      {/* Seccion de imagenes de 'mi espacio' */}
       <section>
         <PicturesSpace />
       </section>
@@ -131,6 +132,16 @@ const LandingComponent = () => {
       <section id="testimonios">
         <SectionYoutube />
       </section>
+
+      <div className="w-1/2 mx-auto mt-2 mb-2">
+        <h1 className="font-medium text-4xl mx-auto text-center text-black">
+          Se atienden Obras Sociales 
+        </h1>
+        <h2 className="font-normal text-2xl mx-auto text-center text-black">
+        (La práctica deberá estar nomenclada como
+          Rehabilitación Respiratoria o Pulmonar)
+        </h2>
+      </div>
 
       <div
         className="bg-cyan-950 mt-20 flex flex-col p-10 border-t-2 border-Verde border-b-2"

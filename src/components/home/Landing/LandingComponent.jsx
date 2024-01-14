@@ -4,11 +4,12 @@ import NavigationBar from "@/components/subcomps/NavigationBar";
 import ContactForm from "./subcomps/ContactForm";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SectionYoutube from "./subcomps/SectionYoutube";
+import SectionIntro from "./subcomps/SectionIntro";
+import Info1Section from "./subcomps/Info1Section";
+import PicturesSpace from "./subcomps/PicturesSpace";
 
 const LandingComponent = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
-
   const [animation1, setAnimation1] = useState(false);
   const [animation2, setAnimation2] = useState(false);
 
@@ -48,130 +49,25 @@ const LandingComponent = () => {
         <img
           src="/images/wp.png"
           alt="WhatsApp"
-          width='100px'
+          width="100px"
           className="fixed bottom-10 right-10 z-50 hover:scale-105 duration-75 transition"
-          
         />
       </a>
       <NavigationBar scrollToSection={scrollToSection} />
-      <div className="text-center flex w-full flex-row h-auto">
-        <div className="flex flex-col mx-auto w-2/3 items-center ">
-          <h1
-            className="font-semibold  mb-4 mt-28 text-Verde text-center xs:text-xl sm:text-3xl md:text-5xl xl:text-7xl xxl:text-8xl"
-            style={{ textShadow: "2px 2px white" }}
-          >
-            Programa Kinerres
-          </h1>
-          <h2 className="font-normal xl:text-2xl lg:text-xl md:text-xl sm:text-base mb-2 text-black text-center">
-            Rehabilitacion respiratoria.
-          </h2>
-          <h2 className="font-normal xl:text-2xl mb:text-xl md:text-lg sm:text-base mb-2 text-black text-center">
-            Tu puedes lograrlo, respirar bien es moverse bien.
-          </h2>
-        </div>
-      </div>
-      <div className=" mx-auto items-center flex w-full justify-center ">
-        <img src="/images/pulmon.png" className="max-h-[50vh]" />
-      </div>
-      <div className="flex flex-col text-black mb-8 min-h-[35vh] items-center w-[90%] mx-auto ">
-        <h1
-          className="font-semibold xs:text-xl sm:text-3xl md:text-5xl xl:text-7xl xxl:text-8xl w-1/2 text-center justify-center flex text-Verde"
-          style={{ textShadow: "2px 2px white" }}
-        >
-          ¿Quiénes somos?
-        </h1>
-        <p className="w-1/2 xs:text-xl sm:text-xl md:text-xl xl:text-2xl justify-center flex text-center mt-10 ">
-          KineRRes ya es una marca registrada en Rehabilitación Respiratoria, es
-          un programa dedicado al entrenamiento de pacientes con diversas
-          patologías respiratorias con o sin requerimiento de de Oxigenoterapia,
-          cuya indicación está dada por médicos neumonólogos, clínicos,
-          oncólogos y cardiólogos.
-        </p>
-      </div>
 
-      <div className="mt-20 flex lg:flex-row flex-col xl:flex-row text-black w-[90%] mx-auto min-h-[40vh] mb-24 items-center ">
-        <div className="flex flex-col w-1/2 ">
-          <div className="flex flex-col text-center justifty-center mx-auto h-1/5 mb-4">
-            <h2 className="font-semibold text-3xl ">Lic. Deborah Gelabert</h2>
-            <h3 className="font-normal text-lg ">
-              Esp. en Kinesiologia Respiratoria Critica y Terapia intensiva MP
-              3533
-            </h3>
-          </div>
-          <img
-            src="/images/lic2.jpg"
-            className="lg:w-[45%] xl:w-[45%] h-fit max-h-[45vh] mx-auto mt-6 border-2 border-white rounded-full mb-10"
-          />
-        </div>
-        <div className="flex flex-col w-1/2">
-          <div className="flex flex-col mx-auto text-center justifty-center h-1/5 mb-4">
-            <h2 className="font-semibold text-3xl ">Lic. Eugenia Mancini</h2>
-            <h3 className="font-normal text-lg ">
-              Esp. en Kinesiologia Cardiorespiratoria MP 7058
-            </h3>
-          </div>
-          <img
-            src="/images/lic1.jpg"
-            className="lg:w-[45%] xl:w-[45%] h-fit max-h-[45vh] mx-auto mt-6 border-2 border-white rounded-full"
-          />
-        </div>
-      </div>
+      <section>
+        <SectionIntro />
+      </section>
 
-      <div
-        className="flex lg:flex-row xl:flex-row flex-col items-center text-center text-black p-4  mt-52 border-t-2 border-b-2 border-Verde"
-        id="tratamientos"
-      >
-        <div className="flex flex-col lg:w-1/2 xl:w-1/2 ml-10 p-2 h-auto " >
-          <div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            style={{
-              boxShadow: isHovered ? "0px 2px 20px 0px rgba(0,0,0,0.5)" : "",
-              transition: "0.35s",
-            }}
-            className="p-3 h-full"
-          >
-            <h2 className="font-semibold text-2xl">
-              ¿Qué es la Rehabilitación Respiratoria?
-            </h2>
-            <p className="font-normal text-lg m-4">
-              {" "}
-              Es un programa multidisciplinario para la atención o cuidado del
-              paciente con afección respiratoria crónica.
-              <br />
-              Se ajusta individualmente para lograr al máximo su actividad
-              física, social y mayor autonomía e independencia funcional, a
-              través de una actividad física supervisada.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col lg:w-1/2 xl:w-1/2 ml-10 p-2">
-          <div
-            onMouseEnter={() => setIsHovered2(true)}
-            onMouseLeave={() => setIsHovered2(false)}
-            style={{
-              boxShadow: isHovered2 ? "0px 2px 20px 0px rgba(0,0,0,0.5)" : "",
-              transition: " 0.35s ",
-            }}
-            className="p-3 h-full"
-          >
-            <h2 className="font-semibold text-2xl">¿En qué se trabaja?</h2>
-            <p className="font-normal text-lg m-4">
-              {" "}
-              En nuestro centro, fortalecemos tu resistencia y músculos
-              respiratorios, mejoramos coordinación y ofrecemos entrenamiento
-              aeróbico personalizado. Supervisado por nuestro equipo
-              especializado, nuestro enfoque busca reducir exacerbaciones y
-              evitar hospitalizaciones. Tu bienestar es nuestra prioridad.
-            </p>
-          </div>
-        </div>
-      </div>
+      <section id="tratamientos">
+        <Info1Section />
+      </section>
 
       <div
         className="flex flex-col text-black  bg-opacity-25 bg-white pt-10 pb-10 border-b-2 border-Verde"
         id="nuestroEspacio"
       >
+        <h1 className="font-semibold text-5xl mx-auto mb-5">Nuestro Espacio</h1>
         <div className="flex lg:flex-row xl:flex-row flex-col">
           <div className="w-2/3 h-full mx-auto ">
             <motion.div
@@ -227,36 +123,24 @@ const LandingComponent = () => {
         </div>
       </div>
 
-      <div className="flex flex-col text-black mt-20" id="testimonios" >
-        <h1 className="w-ful text-center font-semibold lg:text-5xl xl:text-5xl text-3xl mb-10">
-          Encontranos en{" "}
-          <span className="hover:text-red-500 transition duration-150">
-            Youtube
-          </span>
-        </h1>
-        <div className="flex flex-col lg:flex-row xl:flex-row p-12 min-h-[50vh]">
-          <div className="w-1/2 p-2 content-center flex justify-center mx-auto">
-            <iframe
-              src="https://www.youtube.com/embed/BLvn52j75tk"
-              title='PROGRAMA DE REHABILITACIÓN PULMONAR "KINERRES" DE LA UNIDAD DE CARDIOLOGÍA CLÍNICA'
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              className="w-4/5 h-full "
-              allowfullscreen
-            ></iframe>
-          </div>
+      {/* Seccion de imagenes de 'mi espacio' */}
+      <section>
+        <PicturesSpace />
+      </section>
 
-          <div className="w-1/2 p-2 content-center flex justify-center mx-auto">
-            <iframe
-              src="https://www.youtube.com/embed/4rr4OiIOYGU"
-              title="PRIMERA JORNADA DE CAPACITACIÓN SOBRE ENFERMEDAD PULMONAR INTERSTICIAL"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              className="w-4/5 h-full "
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
+      {/* Seccion de youtube */}
+      <section id="testimonios">
+        <SectionYoutube />
+      </section>
+
+      <div className="w-1/2 mx-auto mt-2 mb-2">
+        <h1 className="font-medium text-4xl mx-auto text-center text-black">
+          Se atienden Obras Sociales 
+        </h1>
+        <h2 className="font-normal text-2xl mx-auto text-center text-black">
+        (La práctica deberá estar nomenclada como
+          Rehabilitación Respiratoria o Pulmonar)
+        </h2>
       </div>
 
       <div
